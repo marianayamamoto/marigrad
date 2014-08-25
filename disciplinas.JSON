@@ -499,32 +499,32 @@
 	"ativcomplementar":
 		[
 			{
-				"nome":"ACIEPES",
-				"carga horaria":"60 horas/semestre",
+				"nome":"ACIEPE",
+				"carga":"60 horas/semestre",
 				"comprovante":"Aprovação na Disciplina"},
 			{
 				"nome":"Iniciação Cientifica (com ou sem bolsa)",
-				"carga horaria":"60 horas/semestre",
+				"carga":"60 horas/semestre",
 				"comprovante":"Relatório e/ou documento da Comissão de IC"},
 			{
 				"nome":"Programa de Educação Tutorial (PET)",
-				"carga horaria":"60 horas/semestre",
+				"carga":"60 horas/semestre",
 				"comprovante":"Documento da Comissão de PET"},
 			{
 				"nome":"Bolsa Monitoria",
-				"carga horaria":"30 horas/semestre",
+				"carga":"30 horas/semestre",
 				"comprovante":"Relatório ou documento da PROGRAD ou atestado do professor"},
 			{
 				"nome":"Bolsa Treinamento",
-				"carga horaria":"30 horas/semestre",
+				"carga":"30 horas/semestre",
 				"comprovante":"Relatório ou documento da PROGRAD"},
 			{
 				"nome":"Bolsa Extensão",
-				"carga horaria":"30 horas/semestre",
+				"carga":"30 horas/semestre",
 				"comprovante":"Relatório ou documento da PROEX"},
 			{
 				"nome":"Participação em Empresa Júnior",
-				"carga horaria":"60 horas/anual",
+				"carga":"60 horas/anual",
 				"comprovante":"Comprovante emitido pela Coordenação de Curso"
 			}
 
