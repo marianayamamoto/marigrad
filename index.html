@@ -1,0 +1,28 @@
+<html ng-app="promari">
+<head>
+	<meta charset="utf-8" />
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+	<script src="js/controller.js"></script>
+</head>
+<body ng-controller="MainController">
+
+  <div>
+    <div ng-repeat="perfil in periodos">
+      Perfil {{perfil.periodo}}
+      	<div ng-repeat="disciplina in perfil.disciplinas">
+      		<p>[{{disciplina}}]</p>
+  		</div>
+  		<div ng-if="perfil.opthumanascompl">
+      		<p>{{perfil.opthumanascompl}} créditos Optativas Humanas/Complementares</p>
+  		</div>
+  		<div ng-if="perfil.optprofissionalizate">
+      		<p>{{perfil.optprofissionalizate}} créditos Optativas Profissionalizantes</p>
+  		</div>
+  		<div ng-if="perfil.ativcomplementar">
+      		<p>{{perfil.ativcomplementar}} horas Atividades Complementares</p>
+  		</div>
+    </div>
+  </div>
+
+</body>
+</html>

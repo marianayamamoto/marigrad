@@ -1,0 +1,532 @@
+{
+	"disciplinas":
+		[
+			{
+				"codigo":"02.507-0",
+				"disciplina":"Construção de Algoritmos e Programação",
+				"creditos":8,
+				"prereq":[], 
+				"coreq":[]
+			},
+			{
+				"codigo":"02.000-1",
+				"disciplina":"Orientação ao Profissional em Ciência da Computação",
+				"creditos":2,
+				"prereq":[], 
+				"coreq":[]
+			},
+			{
+				"codigo":"08.111-6",
+				"disciplina":"Geometria Analítica",
+				"creditos":4,
+				"prereq":[], 
+				"coreq":[]
+			},
+			{
+				"codigo":"08.910-9",
+				"disciplina":"Cálculo 1",
+				"creditos":4,
+				"prereq":[], 
+				"coreq":[]
+			},
+			{
+				"codigo":"09.613-0",
+				"disciplina":"Fundamentos de Física para a Computação",
+				"creditos":4,
+				"prereq":[], 
+				"coreq":[]
+			},
+			{
+				"codigo":"02.033-8",
+				"disciplina":"Introdução à Lógica",
+				"creditos":4,
+				"prereq":[], 
+				"coreq":[]
+			},
+			{
+				"codigo":"02.502-0",
+				"disciplina":"Programação de Computadores",
+				"creditos":4,
+				"prereq":["02.507-0","ou_02.505-4"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.437-6",
+				"disciplina":"Circuitos Digitais",
+				"creditos":4,
+				"prereq":["02.033-8"],
+				"coreq":["02.438-4"]
+			},
+			{
+				"codigo":"02.438-4",
+				"disciplina":"Laboratório de Circuitos Digitais",
+				"creditos":2,
+				"prereq":["02.033-8"],
+				"coreq":["02.437-6"]
+			},
+			{
+				"codigo":"08.226-0",
+				"disciplina":"Cálculo Diferencial e Séries",
+				"creditos":4,
+				"prereq":["08.910-9","ou_08.221-0"],
+				"coreq":[]
+			},
+			{
+				"codigo":"15.205-6",
+				"disciplina":"Introdução à Probabilidade 1",
+				"creditos":4,
+				"prereq":["08.910-9","ou_08.221-0"],
+				"coreq":[]
+			},
+			{
+				"codigo":"08.013-6",
+				"disciplina":"Álgebra Linear 1",
+				"creditos":4,
+				"prereq":["08.111-6"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.028-1",
+				"disciplina":"Estruturas Discretas",
+				"creditos":2,
+				"prereq":[],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.520-8",
+				"disciplina":"Estruturas de Dados",
+				"creditos":4,
+				"prereq":["02.502-0"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.560-7",
+				"disciplina":"Introdução aos Sistemas de Informação",
+				"creditos":4,
+				"prereq":["02.507-0","ou_02.505-4"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.735-9",
+				"disciplina":"Arquitetura e Organização de Computadores 1",
+				"creditos":2,
+				"prereq":["(02.437-6","ou_02.732-4"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.736-7",
+				"disciplina":"Laboratório de Arquitetura e Organização de Computadores 1",
+				"creditos":2,
+				"prereq":["02.437-6","ou_02.732-4"],
+				"coreq":["02.735-9"]
+			},
+			{
+				"codigo":"08.302-0",
+				"disciplina":"Cálculo Numérico",
+				"creditos":4,
+				"prereq":["08.910-9","e_08.111-6","e_02.507-0","ou_08.221-0","e_08.111-6","e_02.505-4"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.026-5",
+				"disciplina":"Linguagens Formais e Autômatos",
+				"creditos":4,
+				"prereq":["02.033-8","e_02.028-1"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.266-7",
+				"disciplina":"Organização e Recuperação da Informação",
+				"creditos":4,
+				"prereq":["02.520-8"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.508-9",
+				"disciplina":"Projeto e Análise de Algoritmos",
+				"creditos":4,
+				"prereq":["02.520-8"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.521-6",
+				"disciplina":"Banco de Dados",
+				"creditos":4,
+				"prereq":["02.520-8","ou_02.502-0"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.566-6",
+				"disciplina":"Engenharia de Software 1",
+				"creditos":4,
+				"prereq":["02.502-0","e_02.560-7"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.737-5",
+				"disciplina":"Arquitetura e Organização de Computadores 2",
+				"creditos":4,
+				"prereq":["02.735-9","ou_02.712-0"],
+				"coreq":["02.738-3"]
+			},
+			{
+				"codigo":"02.738-3",
+				"disciplina":"Laboratório de Arquitetura e Organização de Computadores 2",
+				"creditos":2,
+				"prereq":["02.735-9","ou_02.712-0"],
+				"coreq":["02.737-5"]
+			},
+			{
+				"codigo":"02.034-6",
+				"disciplina":"Teoria dos Grafos",
+				"creditos":4,
+				"prereq":["02.502-0","e_02.028-1"],
+				"coreq":[]
+			}	,
+			{
+				"codigo":"02.522-4",
+				"disciplina":"Laboratório de Banco de Dados",
+				"creditos":2,
+				"prereq":["02.521-6"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.509-7",
+				"disciplina":"Paradigmas de Linguagens de Programação",
+				"creditos":4,
+				"prereq":["02.520-8"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.127-0",
+				"disciplina":"Sistemas Operacionais 1",
+				"creditos":4,
+				"prereq":["02.735-9","e_02.736-7"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.113-0",
+				"disciplina":"Construção de Compiladores 1",
+				"creditos":4,
+				"prereq":["02.520-8","e_02.026-5"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.567-4",
+				"disciplina":"Engenharia de Software 2",
+				"creditos":4,
+				"prereq":["02.566-6"],
+				"coreq":[]
+			},
+			{
+				"codigo":"30.154-0",
+				"disciplina":"Administração de Empresas 1",
+				"creditos":4,
+				"prereq":[],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.609-3",
+				"disciplina":"Projeto Acadêmico em Computação",
+				"creditos":2,
+				"prereq":["02.502-0"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.270-5",
+				"disciplina":"Inteligência Artificial",
+				"creditos":4,
+				"prereq":["02.033-8","ou_02.508-9"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.128-8",
+				"disciplina":"Sistemas Operacionais 2",
+				"creditos":4,
+				"prereq":["02.127-0"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.559-3",
+				"disciplina":"Metodologia de Desenvolvimento de Sistemas 1",
+				"creditos":4,
+				"prereq":["02.567-4"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.123-7",
+				"disciplina":"Redes de Computadores",
+				"creditos":4,
+				"prereq":["02.127-0","ou_02.530-5"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.114-8",
+				"disciplina":"Construção de Compiladores 2",
+				"creditos":4,
+				"prereq":["02.113-0"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.552-6",
+				"disciplina":"Computação Gráfica e Multimídia",
+				"creditos":4,
+				"prereq":["08.013-6","e_02.502-0"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.532-1",
+				"disciplina":"Sistemas Distribuídos",
+				"creditos":4,
+				"prereq":["02.127-0","ou_02.530-5"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.128-8",
+				"disciplina":"Desenvolvimento de Software para a Web",
+				"creditos":4,
+				"prereq":["02.507-0"],
+				"coreq":[]
+			},
+			{
+				"codigo":"02.623-9",
+				"disciplina":"Seminários em Computação",
+				"creditos":2,
+				"prereq":["160 créditos"],
+				"coreq":["02.619-0"]
+			},
+			{
+				"codigo":"02.619-0",
+				"disciplina":"Estágio em Computação",
+				"creditos":2,
+				"prereq":["160 créditos"],
+				"coreq":["02.623-9"]
+			},
+			{
+				"codigo":"02.618-2",
+				"disciplina":"Trabalho de Graduação",
+				"creditos":26,
+				"prereq":["140 créditos"],
+				"coreq":[]
+			}
+		],
+	"opthumanascompl":
+		[
+			{
+				"codigo":"06.108-5",
+				"disciplina":"Inglês Instrumental para Computação 1",
+				"creditos":4
+			},
+			{
+				"codigo":"06.109-3",
+				"disciplina":"Inglês Instrumental para Computação 2",
+				"creditos":4
+			},
+			{
+				"codigo":"06.201-4",
+				"disciplina":"Comunicação e Expressão",
+				"creditos":4
+			},
+			{
+				"codigo":"37.005-3",
+				"disciplina":"Introdução à Sociologia Geral",
+				"creditos":4
+			},
+			{
+				"codigo":"37.008-8",
+				"disciplina":"Sociologia Industrial e do Trabalho",
+				"creditos":4
+			},
+			{
+				"codigo":"37.022-3",
+				"disciplina":"Tecnologia e Sociedade",
+				"creditos":4
+			},
+			{
+				"codigo":"16.207-8",
+				"disciplina":"História das Revoluções Modernas",
+				"creditos":4
+			},
+			{
+				"codigo":"16.400-3",
+				"disciplina":"Economia Geral",
+				"creditos":4
+			},
+			{
+				"codigo":"16.405-4",
+				"disciplina":"Economia da Empresa",
+				"creditos":4
+			},
+			{
+				"codigo":"18.001-7",
+				"disciplina":"Métodos e Técnicas de Pesquisa",
+				"creditos":4
+			},
+			{
+				"codigo":"18.002-5",
+				"disciplina":"Filosofia da Ciência",
+				"creditos":4
+			},
+			{
+				"codigo":"18.005-0",
+				"disciplina":"Noções Gerais de Direito",
+				"creditos":4
+			},
+			{
+				"codigo":"11.219-4",
+				"disciplina":"Teoria das Organizações",
+				"creditos":4
+			},
+			{
+				"codigo":"11.012-4",
+				"disciplina":"Microeconomia",
+				"creditos":4
+			},
+			{
+				"codigo":"02.029-0",
+				"disciplina":"Tópicos Avançados A",
+				"creditos":4
+			},
+			{
+				"codigo":"02.036-2",
+				"disciplina":"Tópicos Avançados B",
+				"creditos":4
+			}
+		],
+	"optprofissionalizante":
+		[
+			{
+				"codigo":"02.358-2",
+				"disciplina":"Matemática Computacional",
+				"creditos":4
+			},
+			{
+				"codigo":"02.441-4",
+				"disciplina":"Circuitos Reconfiguráveis",
+				"creditos":4
+			},
+			{
+				"codigo":"02.523-2",
+				"disciplina":"Projeto de Banco de Dados",
+				"creditos":4
+			},
+			{
+				"codigo":"02.702-2",
+				"disciplina":"Tópicos em Informática",
+				"creditos":4
+			},
+			{
+				"codigo":"02.703-0",
+				"disciplina":"Tópicos em Informática 2",
+				"creditos":4
+			},
+			{
+				"codigo":"02.707-3",
+				"disciplina":"Sistemas de Tempo Real",
+				"creditos":4
+			},
+			{
+				"codigo":"02.708-1",
+				"disciplina":"Planejamento e Gerenciamento de Sistemas de Informação",
+				"creditos":4
+			},
+			{
+				"codigo":"02.709-0",
+				"disciplina":"Empreendedores em Informática",
+				"creditos":4
+			},
+			{
+				"codigo":"02.717-0",
+				"disciplina":"Tópicos em Informática 3",
+				"creditos":4
+			},
+			{
+				"codigo":"02.718-9",
+				"disciplina":"Tópicos em Informática 4",
+				"creditos":4
+			},
+			{
+				"codigo":"02.726-0",
+				"disciplina":"Projeto e Manufatura Ass. Por Computador",
+				"creditos":4
+			},
+			{
+				"codigo":"02.727-8",
+				"disciplina":"Microcontroladores e Aplicações",
+				"creditos":4
+			},
+			{
+				"codigo":"02.728-6",
+				"disciplina":"Laboratório Microcontroladores e Aplicações",
+				"creditos":4
+			},
+			{
+				"codigo":"02.743-0",
+				"disciplina":"Tecnologia e Comunicação de Dados",
+				"creditos":4
+			},
+			{
+				"codigo":"02.744-8",
+				"disciplina":"Arquiteturas de Sistemas Computacionais de Alto Desempenho",
+				"creditos":4
+			},
+			{
+				"codigo":"02.745-6",
+				"disciplina":"Análise de Desempenho de Sistemas Computacionais",
+				"creditos":4
+			},
+			{
+				"codigo":"02.746-4",
+				"disciplina":"Introdução à Bioinformática",
+				"creditos":4
+			},
+			{
+				"codigo":"02.749-9",
+				"disciplina":"Empreendedorismo e Desenvolvimento de Negócios",
+				"creditos":4
+			},
+			{
+				"codigo":"02.900-9",
+				"disciplina":"Metodologia Científica e Gerenciamento de Projetos",
+				"creditos":4
+			},
+			{
+				"codigo":"28.119-0",
+				"disciplina":"Teoria dos Jogos",
+				"creditos":2
+			}
+		],
+	"ativcomplementar":
+		[
+			{
+				"nome":"ACIEPES",
+				"carga horaria":"60 horas/semestre",
+				"comprovante":"Aprovação na Disciplina"},
+			{
+				"nome":"Iniciação Cientifica (com ou sem bolsa)",
+				"carga horaria":"60 horas/semestre",
+				"comprovante":"Relatório e/ou documento da Comissão de IC"},
+			{
+				"nome":"Programa de Educação Tutorial (PET)",
+				"carga horaria":"60 horas/semestre",
+				"comprovante":"Documento da Comissão de PET"},
+			{
+				"nome":"Bolsa Monitoria",
+				"carga horaria":"30 horas/semestre",
+				"comprovante":"Relatório ou documento da PROGRAD ou atestado do professor"},
+			{
+				"nome":"Bolsa Treinamento",
+				"carga horaria":"30 horas/semestre",
+				"comprovante":"Relatório ou documento da PROGRAD"},
+			{
+				"nome":"Bolsa Extensão",
+				"carga horaria":"30 horas/semestre",
+				"comprovante":"Relatório ou documento da PROEX"},
+			{
+				"nome":"Participação em Empresa Júnior",
+				"carga horaria":"60 horas/anual",
+				"comprovante":"Comprovante emitido pela Coordenação de Curso"
+			}
+
+		]
+}
