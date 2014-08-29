@@ -2,61 +2,70 @@
 <head>
 	<meta charset="utf-8" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="js/angular.min.js"></script>
+  <!--
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+-->
 	<script src="js/controller.js"></script>
 </head>
 <body ng-controller="MainController">
 
   <div class="perfis">
-    <div ng-repeat="perfil in periodos">
-      Perfil {{perfil.periodo}}
+    <div id="perfil{{perfil.periodo}}" ng-repeat="perfil in periodos">
+      <input id="cb{{perfil.periodo}}" class="cbperfil" type="checkbox" ng-model="perfil.all" ng-click="recalcularCreditos($event,0)"/>
+      <a ng-click="perfil.toggleShow=!perfil.toggleShow">Perfil {{perfil.periodo}}</a>
+      <div id="perfil{{perfil.periodo}}toggle" ng-show="perfil.toggleShow" class="perfil">
       	<div ng-repeat="disciplina in perfil.disciplinas">
-      		<p>
-            <input id="{{disciplina.codigo}}" type="checkbox" ng-click="atualizaCreditos($event,'obrigatorias',disciplina.creditos)"/>
+      		
+            <input id="p{{perfil.periodo}}d{{$index}}" class="disciplina obrigatorias" type="checkbox" ng-model="disciplina.checked" ng-checked="perfil.all" ng-click="recalcularCreditos($event,disciplina.creditos)" data-creditos="{{disciplina.creditos}}"/>
             [{{disciplina.codigo}}] {{disciplina.disciplina}} ({{disciplina.creditos}})
-          </p>
-  		</div>
-  		<div ng-if="perfil.opthumanascompl">
-      		<p>
-            <input id="humcompl{{$index}}" type="checkbox" ng-click="atualizaCreditos($event,'opthumanascompl',perfil.opthumanascompl)"/>
-            {{perfil.opthumanascompl}} créditos de Optativas Humanas/Complementares
-          </p>
-  		</div>
-  		<div ng-if="perfil.optprofissionalizate">
-      		<p>
-            <input id="prof{{$index}}" type="checkbox" ng-click="atualizaCreditos($event,'optprofissionalizate',perfil.optprofissionalizate)"/>
-            {{perfil.optprofissionalizate}} créditos de Optativas Profissionalizantes
-          </p>
-  		</div>
-  		<div ng-if="perfil.ativcomplementar">
-      		<p>
-            <input id="ativcomp{{$index}}" type="checkbox" ng-click="atualizaCreditos($event,'ativcomplementar',perfil.ativcomplementar)"/>
-            {{perfil.ativcomplementar}} horas de Atividades Complementares
-          </p>
-  		</div>
+          
+    		</div>
+    		<div ng-if="perfil.opthumanascompl">
+        		
+              <input id="humcompl{{$index}}" class="disciplina opthumanascompl" type="checkbox" ng-model="perfil.opthumanascomplchecked" ng-checked="perfil.all" ng-click="recalcularCreditos($event,perfil.opthumanascompl)" data-creditos="{{perfil.opthumanascompl}}"/>
+              {{perfil.opthumanascompl}} créditos de Optativas Humanas/Complementares
+            
+    		</div>
+    		<div ng-if="perfil.optprofissionalizante">
+        		
+              <input id="prof{{$index}}" class="disciplina optprofissionalizante" type="checkbox" ng-model="perfil.optprofissionalizantechecked" ng-checked="perfil.all" ng-click="recalcularCreditos($event,perfil.optprofissionalizante)" data-creditos="{{perfil.optprofissionalizante}}"/>
+              {{perfil.optprofissionalizante}} créditos de Optativas Profissionalizantes
+            
+    		</div>
+    		<div ng-if="perfil.ativcomplementar">
+        		
+              <input id="ativcomp{{$index}}" class="disciplina ativcomplementar" type="checkbox" ng-model="perfil.ativcomplementarchecked" ng-checked="perfil.all" ng-click="recalcularCreditos($event,perfil.ativcomplementar)"/>
+              {{perfil.ativcomplementar}} horas de Atividades Complementares
+            
+    		</div>
+      </div>
     </div>
     <div>
       Optativas Humanas/Complementares
       <div ng-repeat="disciplina in disciplinas.opthumanascompl">
-        <p>[{{disciplina.codigo}}] {{disciplina.disciplina}} ({{disciplina.creditos}})</p>
+        [{{disciplina.codigo}}] {{disciplina.disciplina}} ({{disciplina.creditos}})
       </div>
   </div>
     <div ng-repeat="disciplina in disciplinas.optprofissionalizante">
-      <p>[{{disciplina.codigo}}] {{disciplina.disciplina}} ({{disciplina.creditos}})</p>
+      [{{disciplina.codigo}}] {{disciplina.disciplina}} ({{disciplina.creditos}})
     </div>
     <div ng-repeat="disciplina in disciplinas.ativcomplementar">
-      <p>{{disciplina.nome}} - {{disciplina.carga}} ({{disciplina.comprovante}})</p>
+      {{disciplina.nome}} - {{disciplina.carga}} ({{disciplina.comprovante}})
     </div>
   </div>
   <div class="calculos">
     <div>
-      {{creditosObrigatorios}}/154 créditos de disciplinas obrigatórias
+      {{creditosObrigatorios}}/152 créditos de disciplinas obrigatórias ({{(creditosObrigatorios/152)*100 | number:0}}%)
     </div>
     <div>
-      {{creditosHumCompl}}/12 créditos de disciplinas optativas profissionalizantes
+      {{creditosHumCompl}}/20 créditos de disciplinas para o desenvolvimento humano e complementar ({{(creditosHumCompl/20)*100 | number:0}}%)
     </div>
     <div>
-      {{creditosProfiss}}/20 créditos de disciplinas para o desenvolvimento humano e complementar
+      {{creditosProfiss}}/12 créditos de disciplinas optativas profissionalizantes ({{(creditosProfiss/12)*100 | number:0}}%)
+    </div>
+    <div>
+      {{total = creditosObrigatorios+creditosHumCompl+creditosProfiss}}/212 créditos de disciplinas para o desenvolvimento humano e complementar ({{(total/212)*100 | number:2}}%)
     </div>
   </div>
 
