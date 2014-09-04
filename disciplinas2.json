@@ -109,7 +109,7 @@
 			{
 				"codigo":"02.735-9",
 				"disciplina":"Arquitetura e Organização de Computadores 1",
-				"creditos":2,
+				"creditos":4,
 				"prereq":["(02.437-6","ou_02.732-4"],
 				"coreq":[]
 			},
@@ -293,21 +293,24 @@
 				"disciplina":"Seminários em Computação",
 				"creditos":2,
 				"prereq":["160 créditos"],
-				"coreq":["02.619-0"]
+				"coreq":["02.619-0"],
+				"estagio": true
 			},
 			{
 				"codigo":"02.619-0",
 				"disciplina":"Estágio em Computação",
 				"creditos":24,
 				"prereq":["160 créditos"],
-				"coreq":["02.623-9"]
+				"coreq":["02.623-9"],
+				"estagio": true
 			},
 			{
 				"codigo":"02.618-2",
 				"disciplina":"Trabalho de Graduação",
 				"creditos":26,
 				"prereq":["140 créditos"],
-				"coreq":[]
+				"coreq":[],
+				"estagio": true
 			}
 		],
 	"opthumanascompl":

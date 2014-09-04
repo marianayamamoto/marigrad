@@ -17,6 +17,10 @@ app.controller('MainController', function ($scope,$http) {
     				//var codDisciplina = value;
     				if(value.codigo == codDisciplina){
     					$scope.periodos[periodo].disciplinas[posDisciplina] = value;
+              if(value.estagio)
+                $scope.periodos[periodo].disciplinas[posDisciplina].estagio = true;
+              else
+                $scope.periodos[periodo].disciplinas[posDisciplina].estagio = false;
     				}
 		    		
 		    	});	
@@ -28,26 +32,8 @@ app.controller('MainController', function ($scope,$http) {
   $scope.creditosObrigatorios = 0;
   $scope.creditosHumCompl = 0;
   $scope.creditosProfiss = 0;
-
-  $scope.atualizaCreditos = function(el, tipo, creditos){
-  	if(tipo == "obrigatorias"){
-  		if(el.disciplina.checked){
-	  		$scope.creditosObrigatorios += creditos;
-	  	}else
-	  		$scope.creditosObrigatorios -= creditos;
-  	}else if(tipo == "opthumanascompl"){
-  		if(el){
-	  		$scope.creditosHumCompl += creditos;
-	  	}else
-	  		$scope.creditosHumCompl -= creditos;
-
-  	}else if(tipo == "optprofissionalizante"){
-  		if(el){
-	  		$scope.creditosProfiss += creditos;
-	  	}else
-	  		$scope.creditosProfiss -= creditos;
-  	}
-  }
+  $scope.horasAtivCompl = 0;
+  $scope.creditosEstagio = 0;
 
   $scope.recalcularCreditos = function($event,creditos){
     var checked = $event.target.checked;
@@ -62,30 +48,48 @@ app.controller('MainController', function ($scope,$http) {
         if(checked){
           if(!childChecked){
             if(childClass.indexOf("obrigatorias") > -1){
-              $scope.creditosObrigatorios += childCredits;
+              if(childClass.indexOf("estagio") > -1)
+                $scope.creditosEstagio += childCredits;
+              else
+                $scope.creditosObrigatorios += childCredits;
             }else if(childClass.indexOf("opthumanascompl") > -1){
               $scope.creditosHumCompl += childCredits;
             }else if(childClass.indexOf("optprofissionalizante") > -1){
               $scope.creditosProfiss += childCredits;
+            }else if(childClass.indexOf("ativcomplementar") > -1){
+              $scope.horasAtivCompl += childCredits;
             }
           }
         }else{
           if(childChecked){
             if(childClass.indexOf("obrigatorias") > -1){
-              $scope.creditosObrigatorios -= childCredits;
+              if(childClass.indexOf("estagio") > -1)
+                $scope.creditosEstagio -= childCredits;
+              else
+                $scope.creditosObrigatorios -= childCredits;
             }else if(childClass.indexOf("opthumanascompl") > -1){
               $scope.creditosHumCompl -= childCredits;
             }else if(childClass.indexOf("optprofissionalizante") > -1){
               $scope.creditosProfiss -= childCredits;
+            }else if(childClass.indexOf("ativcomplementar") > -1){
+              $scope.horasAtivCompl -= childCredits;
             }
           }
         }
       });
     }else if(elemClass.indexOf("obrigatorias") > -1){
-      if(checked){
-        $scope.creditosObrigatorios += creditos;
-      }else
-        $scope.creditosObrigatorios -= creditos;
+      if(elemClass.indexOf("estagio") > -1){
+        if(checked){
+          $scope.creditosEstagio += creditos;
+        }else
+          $scope.creditosEstagio -= creditos;
+      }
+      else{
+        if(checked){
+          $scope.creditosObrigatorios += creditos;
+        }else
+          $scope.creditosObrigatorios -= creditos;  
+      }      
     }else if(elemClass.indexOf("opthumanascompl") > -1){
       if(checked){
         $scope.creditosHumCompl += creditos;
@@ -97,6 +101,11 @@ app.controller('MainController', function ($scope,$http) {
         $scope.creditosProfiss += creditos;
       }else
         $scope.creditosProfiss -= creditos;
+    }else if(elemClass.indexOf("ativcomplementar") > -1){
+      if(checked){
+        $scope.horasAtivCompl += creditos;
+      }else
+        $scope.horasAtivCompl -= creditos;
     }
   }
 });

@@ -17,7 +17,7 @@
       <div id="perfil{{perfil.periodo}}toggle" ng-show="perfil.toggleShow" class="perfil">
       	<div ng-repeat="disciplina in perfil.disciplinas">
       		
-            <input id="p{{perfil.periodo}}d{{$index}}" class="disciplina obrigatorias" type="checkbox" ng-model="disciplina.checked" ng-checked="perfil.all" ng-click="recalcularCreditos($event,disciplina.creditos)" data-creditos="{{disciplina.creditos}}"/>
+            <input id="p{{perfil.periodo}}d{{$index}}" class="disciplina obrigatorias" ng-class="{estagio:disciplina.estagio}" type="checkbox" ng-model="disciplina.checked" ng-checked="perfil.all" ng-click="recalcularCreditos($event,disciplina.creditos)" data-creditos="{{disciplina.creditos}}"/>
             [{{disciplina.codigo}}] {{disciplina.disciplina}} ({{disciplina.creditos}})
           
     		</div>
@@ -35,7 +35,7 @@
     		</div>
     		<div ng-if="perfil.ativcomplementar">
         		
-              <input id="ativcomp{{$index}}" class="disciplina ativcomplementar" type="checkbox" ng-model="perfil.ativcomplementarchecked" ng-checked="perfil.all" ng-click="recalcularCreditos($event,perfil.ativcomplementar)"/>
+              <input id="ativcomp{{$index}}" class="disciplina ativcomplementar" type="checkbox" ng-model="perfil.ativcomplementarchecked" ng-checked="perfil.all" ng-click="recalcularCreditos($event,perfil.ativcomplementar)" data-creditos="{{perfil.ativcomplementar}}"/>
               {{perfil.ativcomplementar}} horas de Atividades Complementares
             
     		</div>
@@ -56,7 +56,7 @@
   </div>
   <div class="calculos">
     <div>
-      {{creditosObrigatorios}}/152 créditos de disciplinas obrigatórias ({{(creditosObrigatorios/152)*100 | number:0}}%)
+      {{creditosObrigatorios}}/154 créditos de disciplinas obrigatórias ({{(creditosObrigatorios/154)*100 | number:0}}%)
     </div>
     <div>
       {{creditosHumCompl}}/20 créditos de disciplinas para o desenvolvimento humano e complementar ({{(creditosHumCompl/20)*100 | number:0}}%)
@@ -65,7 +65,13 @@
       {{creditosProfiss}}/12 créditos de disciplinas optativas profissionalizantes ({{(creditosProfiss/12)*100 | number:0}}%)
     </div>
     <div>
-      {{total = creditosObrigatorios+creditosHumCompl+creditosProfiss}}/212 créditos de disciplinas para o desenvolvimento humano e complementar ({{(total/212)*100 | number:2}}%)
+      {{horasAtivCompl}}/60 horas de atividades complementares ({{(horasAtivCompl/60)*100 | number:0}}%)
+    </div>
+    <div>
+      {{creditosEstagio}}/26 créditos de estágio ({{(creditosEstagio/26)*100 | number:0}}%)
+    </div>
+    <div>
+      {{total = creditosObrigatorios+creditosHumCompl+creditosProfiss+creditosEstagio}}/212 créditos de disciplinas ({{(total/212)*100 | number:2}}%)
     </div>
   </div>
 
